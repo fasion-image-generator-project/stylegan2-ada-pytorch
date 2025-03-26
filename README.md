@@ -1,0 +1,1 @@
+# Fashion image style control
