@@ -3,5 +3,5 @@ __pycache__/
 .results/
 .content/
 .datasets/
-.pretrained/ffhq1024.pkl
+.pretrained/
 .test/test_results/

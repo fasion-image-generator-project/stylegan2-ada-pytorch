@@ -1,0 +1,1 @@
+{"results": {"kid50k_full": 0.002521470330330303}, "metric": "kid50k_full", "total_time": 599.7555527687073, "total_time_str": "10m 00s", "num_gpus": 1, "snapshot_pkl": "network-snapshot-002000.pkl", "timestamp": 1742703840.4490616}

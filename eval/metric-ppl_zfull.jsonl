@@ -1,0 +1,1 @@
+{"results": {"ppl_zfull": 395.29052734375}, "metric": "ppl_zfull", "total_time": 1369.704565525055, "total_time_str": "22m 50s", "num_gpus": 1, "snapshot_pkl": "network-snapshot-002000.pkl", "timestamp": 1742707064.088081}

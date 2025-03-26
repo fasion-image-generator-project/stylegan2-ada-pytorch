@@ -1,0 +1,1 @@
+{"results": {"pr50k3_full_precision": 0.6089000105857849, "pr50k3_full_recall": 0.18849493563175201}, "metric": "pr50k3_full", "total_time": 657.2985045909882, "total_time_str": "10m 57s", "num_gpus": 1, "snapshot_pkl": "network-snapshot-002000.pkl", "timestamp": 1742704695.9802477}

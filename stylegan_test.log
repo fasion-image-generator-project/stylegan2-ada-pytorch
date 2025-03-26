@@ -1,0 +1,612 @@
+2025-03-25 10:10:32,734 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742897432
+2025-03-25 10:10:32,734 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:10:32,734 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:10:32,734 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897432
+2025-03-25 10:10:32,734 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:10:32,734 - INFO - 환경 확인 중...
+2025-03-25 10:10:32,805 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:10:32,805 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:10:32,805 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:10:32,924 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897432/images/test_image.png
+2025-03-25 10:10:32,924 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:10:32,924 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897432/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897432/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:10:38,296 - ERROR - 투영 실패: Usage: pbaylies_projector.py [OPTIONS]
+Try 'pbaylies_projector.py --help' for help.
+
+Error: No such option: --target (Possible options: --target-image, --target-text)
+
+2025-03-25 10:10:38,296 - WARNING - 투영 테스트 실패! 다음 테스트로 진행합니다.
+2025-03-25 10:10:38,296 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:10:38,296 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897432/factors/factors.pt
+2025-03-25 10:10:44,521 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897432/factors/factors.pt
+2025-03-25 10:10:44,522 - WARNING - 이전 단계 실패로 스타일 요소 적용 테스트를 건너뜁니다.
+2025-03-25 10:10:44,522 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:10:44,522 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:10:51,727 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 10:10:52,749 - ERROR - 스타일 믹싱 실패: Usage: style_mixing.py [OPTIONS]
+Try 'style_mixing.py --help' for help.
+
+Error: Invalid value for '--styles': 0-6,8-14
+
+2025-03-25 10:10:52,749 - WARNING - 스타일 믹싱 테스트 실패!
+2025-03-25 10:10:52,750 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:10:52,750 - INFO - 환경 확인: 성공
+2025-03-25 10:10:52,750 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:10:52,750 - INFO - 투영 테스트: 실패
+2025-03-25 10:10:52,750 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:10:52,750 - INFO - 스타일 요소 적용 테스트: 실패
+2025-03-25 10:10:52,750 - INFO - 스타일 믹싱 테스트: 실패
+2025-03-25 10:10:52,750 - INFO - 성공률: 50.0%
+2025-03-25 10:10:52,750 - INFO - 실행 시간: 20.0초
+2025-03-25 10:10:52,751 - INFO - 전체 결과: 성공
+2025-03-25 10:10:52,751 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897432
+2025-03-25 10:17:05,815 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742897825
+2025-03-25 10:17:05,815 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:17:05,815 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:17:05,815 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897825
+2025-03-25 10:17:05,815 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:17:05,815 - INFO - 환경 확인 중...
+2025-03-25 10:17:05,875 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:17:05,875 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:17:05,875 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:17:05,982 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897825/images/test_image.png
+2025-03-25 10:17:05,982 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:17:05,982 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897825/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897825/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:17:11,195 - ERROR - 투영 실패: Usage: pbaylies_projector.py [OPTIONS]
+Try 'pbaylies_projector.py --help' for help.
+
+Error: No such option: --target (Possible options: --target-image, --target-text)
+
+2025-03-25 10:17:11,195 - WARNING - 투영 테스트 실패! 다음 테스트로 진행합니다.
+2025-03-25 10:17:11,195 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:17:11,195 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897825/factors/factors.pt
+2025-03-25 10:17:17,266 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897825/factors/factors.pt
+2025-03-25 10:17:17,266 - WARNING - 이전 단계 실패로 스타일 요소 적용 테스트를 건너뜁니다.
+2025-03-25 10:17:17,267 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:17:17,267 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:17:24,010 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 10:17:25,042 - ERROR - 스타일 믹싱 실패: Usage: style_mixing.py [OPTIONS]
+Try 'style_mixing.py --help' for help.
+
+Error: Invalid value for '--styles': 0-6,8-14
+
+2025-03-25 10:17:25,042 - WARNING - 스타일 믹싱 테스트 실패!
+2025-03-25 10:17:25,043 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:17:25,043 - INFO - 환경 확인: 성공
+2025-03-25 10:17:25,043 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:17:25,043 - INFO - 투영 테스트: 실패
+2025-03-25 10:17:25,043 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:17:25,043 - INFO - 스타일 요소 적용 테스트: 실패
+2025-03-25 10:17:25,043 - INFO - 스타일 믹싱 테스트: 실패
+2025-03-25 10:17:25,043 - INFO - 성공률: 50.0%
+2025-03-25 10:17:25,043 - INFO - 실행 시간: 19.2초
+2025-03-25 10:17:25,043 - INFO - 전체 결과: 성공
+2025-03-25 10:17:25,043 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897825
+2025-03-25 10:18:52,409 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742897932
+2025-03-25 10:18:52,409 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:18:52,409 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:18:52,409 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897932
+2025-03-25 10:18:52,409 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:18:52,409 - INFO - 환경 확인 중...
+2025-03-25 10:18:52,500 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:18:52,500 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:18:52,500 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:18:52,619 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897932/images/test_image.png
+2025-03-25 10:18:52,619 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:18:52,619 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897932/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897932/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:19:55,462 - ERROR - 투영 이미지 결과를 찾을 수 없습니다
+2025-03-25 10:19:55,462 - WARNING - 투영 테스트 실패! 다음 테스트로 진행합니다.
+2025-03-25 10:19:55,463 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:19:55,463 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897932/factors/factors.pt
+2025-03-25 10:20:01,682 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897932/factors/factors.pt
+2025-03-25 10:20:01,682 - WARNING - 이전 단계 실패로 스타일 요소 적용 테스트를 건너뜁니다.
+2025-03-25 10:20:01,682 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:20:01,682 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:20:08,546 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 10:20:09,618 - ERROR - 스타일 믹싱 실패: Usage: style_mixing.py [OPTIONS]
+Try 'style_mixing.py --help' for help.
+
+Error: Invalid value for '--styles': 0-6,8-14
+
+2025-03-25 10:20:09,618 - WARNING - 스타일 믹싱 테스트 실패!
+2025-03-25 10:20:09,619 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:20:09,619 - INFO - 환경 확인: 성공
+2025-03-25 10:20:09,619 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:20:09,619 - INFO - 투영 테스트: 실패
+2025-03-25 10:20:09,619 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:20:09,619 - INFO - 스타일 요소 적용 테스트: 실패
+2025-03-25 10:20:09,619 - INFO - 스타일 믹싱 테스트: 실패
+2025-03-25 10:20:09,619 - INFO - 성공률: 50.0%
+2025-03-25 10:20:09,619 - INFO - 실행 시간: 77.2초
+2025-03-25 10:20:09,619 - INFO - 전체 결과: 성공
+2025-03-25 10:20:09,619 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742897932
+2025-03-25 10:26:18,938 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742898378
+2025-03-25 10:26:18,938 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:26:18,938 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:26:18,938 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378
+2025-03-25 10:26:18,938 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:26:18,938 - INFO - 환경 확인 중...
+2025-03-25 10:26:19,009 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:26:19,009 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:26:19,009 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:26:19,121 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/images/test_image.png
+2025-03-25 10:26:19,121 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:26:19,121 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:26:43,093 - INFO - 이미지 투영 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/projections/projected_w.npz
+2025-03-25 10:26:43,093 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:26:43,093 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+2025-03-25 10:26:49,293 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+2025-03-25 10:26:49,293 - INFO - 스타일 요소 적용 테스트 중...
+2025-03-25 10:26:49,293 - INFO - 요소 0, 강도 5.0 적용 중...
+2025-03-25 10:26:50,452 - WARNING - 요소 0 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:50,453 - INFO - 요소 0, 강도 -5.0 적용 중...
+2025-03-25 10:26:51,607 - WARNING - 요소 0 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:51,607 - INFO - 요소 1, 강도 5.0 적용 중...
+2025-03-25 10:26:52,749 - WARNING - 요소 1 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:52,750 - INFO - 요소 1, 강도 -5.0 적용 중...
+2025-03-25 10:26:53,847 - WARNING - 요소 1 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:53,848 - INFO - 요소 2, 강도 5.0 적용 중...
+2025-03-25 10:26:54,986 - WARNING - 요소 2 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:54,986 - INFO - 요소 2, 강도 -5.0 적용 중...
+2025-03-25 10:26:56,122 - WARNING - 요소 2 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:56,122 - INFO - 요소 3, 강도 5.0 적용 중...
+2025-03-25 10:26:57,256 - WARNING - 요소 3 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:57,257 - INFO - 요소 3, 강도 -5.0 적용 중...
+2025-03-25 10:26:58,394 - WARNING - 요소 3 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:58,395 - INFO - 요소 4, 강도 5.0 적용 중...
+2025-03-25 10:26:59,548 - WARNING - 요소 4 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:26:59,548 - INFO - 요소 4, 강도 -5.0 적용 중...
+2025-03-25 10:27:00,632 - WARNING - 요소 4 적용 실패: usage: apply_factor.py [-h] [-i INDEX] [--seeds SEEDS] [-d DEGREE]
+                       [--output OUTPUT] --ckpt CKPT [--space SPACE]
+                       [--truncation TRUNCATION]
+                       [--vid_increment VID_INCREMENT] [--video | --no-video]
+                       factor
+apply_factor.py: error: unrecognized arguments: --projected-w /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378/factors/factors.pt
+
+2025-03-25 10:27:00,633 - ERROR - 모든 요소 적용이 실패했습니다
+2025-03-25 10:27:00,633 - WARNING - 스타일 요소 적용 테스트 실패! 다음 테스트로 진행합니다.
+2025-03-25 10:27:00,633 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:27:00,633 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:27:07,574 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 10:27:08,633 - ERROR - 스타일 믹싱 실패: Usage: style_mixing.py [OPTIONS]
+Try 'style_mixing.py --help' for help.
+
+Error: Invalid value for '--styles': 0-6,8-14
+
+2025-03-25 10:27:08,634 - WARNING - 스타일 믹싱 테스트 실패!
+2025-03-25 10:27:08,635 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:27:08,635 - INFO - 환경 확인: 성공
+2025-03-25 10:27:08,636 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:27:08,636 - INFO - 투영 테스트: 성공
+2025-03-25 10:27:08,636 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:27:08,636 - INFO - 스타일 요소 적용 테스트: 실패
+2025-03-25 10:27:08,636 - INFO - 스타일 믹싱 테스트: 실패
+2025-03-25 10:27:08,636 - INFO - 성공률: 66.7%
+2025-03-25 10:27:08,637 - INFO - 실행 시간: 49.7초
+2025-03-25 10:27:08,637 - INFO - 전체 결과: 성공
+2025-03-25 10:27:08,637 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898378
+2025-03-25 10:31:51,750 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742898711
+2025-03-25 10:31:51,750 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:31:51,750 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:31:51,750 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898711
+2025-03-25 10:31:51,750 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:31:51,750 - INFO - 환경 확인 중...
+2025-03-25 10:31:51,823 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:31:51,823 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:31:51,823 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:31:51,936 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898711/images/test_image.png
+2025-03-25 10:31:51,936 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:31:51,936 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898711/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898711/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:32:15,461 - INFO - 이미지 투영 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898711/projections/projected_w.npz
+2025-03-25 10:32:15,461 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:32:15,461 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898711/factors/factors.pt
+2025-03-25 10:32:21,654 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898711/factors/factors.pt
+2025-03-25 10:32:21,654 - INFO - 스타일 요소 적용 테스트 중...
+2025-03-25 10:32:21,655 - INFO - 요소 0, 강도 5.0 적용 중...
+2025-03-25 10:32:32,495 - INFO - 요소 0, 강도 5.0 적용 완료
+2025-03-25 10:32:32,496 - INFO - 요소 0, 강도 -5.0 적용 중...
+2025-03-25 10:32:39,991 - INFO - 요소 0, 강도 -5.0 적용 완료
+2025-03-25 10:32:39,991 - INFO - 요소 1, 강도 5.0 적용 중...
+2025-03-25 10:32:51,163 - INFO - 요소 1, 강도 5.0 적용 완료
+2025-03-25 10:32:51,163 - INFO - 요소 1, 강도 -5.0 적용 중...
+2025-03-25 10:32:58,633 - INFO - 요소 1, 강도 -5.0 적용 완료
+2025-03-25 10:32:58,634 - INFO - 요소 2, 강도 5.0 적용 중...
+2025-03-25 10:33:10,064 - INFO - 요소 2, 강도 5.0 적용 완료
+2025-03-25 10:33:10,065 - INFO - 요소 2, 강도 -5.0 적용 중...
+2025-03-25 10:33:17,581 - INFO - 요소 2, 강도 -5.0 적용 완료
+2025-03-25 10:33:17,586 - INFO - 요소 3, 강도 5.0 적용 중...
+2025-03-25 10:33:29,089 - INFO - 요소 3, 강도 5.0 적용 완료
+2025-03-25 10:33:29,089 - INFO - 요소 3, 강도 -5.0 적용 중...
+2025-03-25 10:33:36,547 - INFO - 요소 3, 강도 -5.0 적용 완료
+2025-03-25 10:33:36,548 - INFO - 요소 4, 강도 5.0 적용 중...
+2025-03-25 10:33:47,181 - INFO - 요소 4, 강도 5.0 적용 완료
+2025-03-25 10:33:47,181 - INFO - 요소 4, 강도 -5.0 적용 중...
+2025-03-25 10:33:54,716 - INFO - 요소 4, 강도 -5.0 적용 완료
+2025-03-25 10:33:54,716 - INFO - 스타일 요소 적용 테스트 완료
+2025-03-25 10:33:54,716 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:33:54,716 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:34:01,565 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 10:34:02,610 - ERROR - 스타일 믹싱 실패: Usage: style_mixing.py [OPTIONS]
+Try 'style_mixing.py --help' for help.
+
+Error: Invalid value for '--styles': 0-6,8-14
+
+2025-03-25 10:34:02,610 - WARNING - 스타일 믹싱 테스트 실패!
+2025-03-25 10:34:02,611 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:34:02,611 - INFO - 환경 확인: 성공
+2025-03-25 10:34:02,611 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:34:02,611 - INFO - 투영 테스트: 성공
+2025-03-25 10:34:02,611 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:34:02,611 - INFO - 스타일 요소 적용 테스트: 성공
+2025-03-25 10:34:02,611 - INFO - 스타일 믹싱 테스트: 실패
+2025-03-25 10:34:02,611 - INFO - 성공률: 83.3%
+2025-03-25 10:34:02,611 - INFO - 실행 시간: 130.9초
+2025-03-25 10:34:02,611 - INFO - 전체 결과: 성공
+2025-03-25 10:34:02,611 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742898711
+2025-03-25 10:38:04,627 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742899084
+2025-03-25 10:38:04,627 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:38:04,627 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:38:04,627 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899084
+2025-03-25 10:38:04,627 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:38:04,627 - INFO - 환경 확인 중...
+2025-03-25 10:38:04,716 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:38:04,716 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:38:04,716 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:38:04,827 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899084/images/test_image.png
+2025-03-25 10:38:04,827 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:38:04,827 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899084/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899084/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:38:28,420 - INFO - 이미지 투영 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899084/projections/projected_w.npz
+2025-03-25 10:38:28,420 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:38:28,420 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899084/factors/factors.pt
+2025-03-25 10:38:34,476 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899084/factors/factors.pt
+2025-03-25 10:38:34,476 - INFO - 스타일 요소 적용 테스트 중...
+2025-03-25 10:38:34,476 - INFO - 요소 0, 강도 5.0 적용 중...
+2025-03-25 10:38:46,221 - INFO - 요소 0, 강도 5.0 적용 완료
+2025-03-25 10:38:46,221 - INFO - 요소 0, 강도 -5.0 적용 중...
+2025-03-25 10:38:53,777 - INFO - 요소 0, 강도 -5.0 적용 완료
+2025-03-25 10:38:53,778 - INFO - 요소 1, 강도 5.0 적용 중...
+2025-03-25 10:39:04,842 - INFO - 요소 1, 강도 5.0 적용 완료
+2025-03-25 10:39:04,843 - INFO - 요소 1, 강도 -5.0 적용 중...
+2025-03-25 10:39:12,395 - INFO - 요소 1, 강도 -5.0 적용 완료
+2025-03-25 10:39:12,396 - INFO - 요소 2, 강도 5.0 적용 중...
+2025-03-25 10:39:23,806 - INFO - 요소 2, 강도 5.0 적용 완료
+2025-03-25 10:39:23,806 - INFO - 요소 2, 강도 -5.0 적용 중...
+2025-03-25 10:39:31,328 - INFO - 요소 2, 강도 -5.0 적용 완료
+2025-03-25 10:39:31,330 - INFO - 요소 3, 강도 5.0 적용 중...
+2025-03-25 10:39:43,006 - INFO - 요소 3, 강도 5.0 적용 완료
+2025-03-25 10:39:43,006 - INFO - 요소 3, 강도 -5.0 적용 중...
+2025-03-25 10:39:50,561 - INFO - 요소 3, 강도 -5.0 적용 완료
+2025-03-25 10:39:50,565 - INFO - 요소 4, 강도 5.0 적용 중...
+2025-03-25 10:40:01,546 - INFO - 요소 4, 강도 5.0 적용 완료
+2025-03-25 10:40:01,547 - INFO - 요소 4, 강도 -5.0 적용 중...
+2025-03-25 10:40:09,020 - INFO - 요소 4, 강도 -5.0 적용 완료
+2025-03-25 10:40:09,021 - INFO - 스타일 요소 적용 테스트 완료
+2025-03-25 10:40:09,021 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:40:09,021 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:40:15,929 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 10:40:16,991 - ERROR - 스타일 믹싱 실패: Usage: style_mixing.py [OPTIONS]
+Try 'style_mixing.py --help' for help.
+
+Error: Invalid value for '--styles': [0-6,8-14]
+
+2025-03-25 10:40:16,992 - WARNING - 스타일 믹싱 테스트 실패!
+2025-03-25 10:40:16,993 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:40:16,993 - INFO - 환경 확인: 성공
+2025-03-25 10:40:16,993 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:40:16,993 - INFO - 투영 테스트: 성공
+2025-03-25 10:40:16,994 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:40:16,994 - INFO - 스타일 요소 적용 테스트: 성공
+2025-03-25 10:40:16,994 - INFO - 스타일 믹싱 테스트: 실패
+2025-03-25 10:40:16,994 - INFO - 성공률: 83.3%
+2025-03-25 10:40:16,994 - INFO - 실행 시간: 132.4초
+2025-03-25 10:40:16,994 - INFO - 전체 결과: 성공
+2025-03-25 10:40:16,995 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899084
+2025-03-25 10:47:39,109 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742899659
+2025-03-25 10:47:39,109 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:47:39,109 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:47:39,109 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899659
+2025-03-25 10:47:39,109 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:47:39,109 - INFO - 환경 확인 중...
+2025-03-25 10:47:39,162 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:47:39,162 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:47:39,162 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:47:39,271 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899659/images/test_image.png
+2025-03-25 10:47:39,272 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:47:39,272 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899659/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899659/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:48:02,968 - INFO - 이미지 투영 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899659/projections/projected_w.npz
+2025-03-25 10:48:02,968 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:48:02,968 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899659/factors/factors.pt
+2025-03-25 10:48:09,065 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899659/factors/factors.pt
+2025-03-25 10:48:09,066 - INFO - 스타일 요소 적용 테스트 중...
+2025-03-25 10:48:09,066 - INFO - 요소 0, 강도 5.0 적용 중...
+2025-03-25 10:48:20,203 - INFO - 요소 0, 강도 5.0 적용 완료
+2025-03-25 10:48:20,203 - INFO - 요소 0, 강도 -5.0 적용 중...
+2025-03-25 10:48:27,564 - INFO - 요소 0, 강도 -5.0 적용 완료
+2025-03-25 10:48:27,565 - INFO - 요소 1, 강도 5.0 적용 중...
+2025-03-25 10:48:38,880 - INFO - 요소 1, 강도 5.0 적용 완료
+2025-03-25 10:48:38,880 - INFO - 요소 1, 강도 -5.0 적용 중...
+2025-03-25 10:48:46,170 - INFO - 요소 1, 강도 -5.0 적용 완료
+2025-03-25 10:48:46,174 - INFO - 요소 2, 강도 5.0 적용 중...
+2025-03-25 10:48:56,605 - INFO - 요소 2, 강도 5.0 적용 완료
+2025-03-25 10:48:56,605 - INFO - 요소 2, 강도 -5.0 적용 중...
+2025-03-25 10:49:04,017 - INFO - 요소 2, 강도 -5.0 적용 완료
+2025-03-25 10:49:04,018 - INFO - 요소 3, 강도 5.0 적용 중...
+2025-03-25 10:49:15,012 - INFO - 요소 3, 강도 5.0 적용 완료
+2025-03-25 10:49:15,012 - INFO - 요소 3, 강도 -5.0 적용 중...
+2025-03-25 10:49:22,403 - INFO - 요소 3, 강도 -5.0 적용 완료
+2025-03-25 10:49:22,404 - INFO - 요소 4, 강도 5.0 적용 중...
+2025-03-25 10:49:33,535 - INFO - 요소 4, 강도 5.0 적용 완료
+2025-03-25 10:49:33,535 - INFO - 요소 4, 강도 -5.0 적용 중...
+2025-03-25 10:49:40,874 - INFO - 요소 4, 강도 -5.0 적용 완료
+2025-03-25 10:49:40,879 - INFO - 스타일 요소 적용 테스트 완료
+2025-03-25 10:49:40,879 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:49:40,879 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:49:47,683 - ERROR - 스타일 믹싱 테스트 중 오류 발생: name 'factors_to_test' is not defined
+2025-03-25 10:49:47,683 - WARNING - 스타일 믹싱 테스트 실패!
+2025-03-25 10:49:47,684 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:49:47,684 - INFO - 환경 확인: 성공
+2025-03-25 10:49:47,684 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:49:47,684 - INFO - 투영 테스트: 성공
+2025-03-25 10:49:47,684 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:49:47,684 - INFO - 스타일 요소 적용 테스트: 성공
+2025-03-25 10:49:47,684 - INFO - 스타일 믹싱 테스트: 실패
+2025-03-25 10:49:47,684 - INFO - 성공률: 83.3%
+2025-03-25 10:49:47,684 - INFO - 실행 시간: 128.6초
+2025-03-25 10:49:47,684 - INFO - 전체 결과: 성공
+2025-03-25 10:49:47,684 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899659
+2025-03-25 10:51:54,282 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742899914
+2025-03-25 10:51:54,282 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:51:54,282 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:51:54,282 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899914
+2025-03-25 10:51:54,282 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:51:54,282 - INFO - 환경 확인 중...
+2025-03-25 10:51:54,336 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:51:54,336 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:51:54,336 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:51:54,443 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899914/images/test_image.png
+2025-03-25 10:51:54,443 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:51:54,443 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899914/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899914/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:52:18,248 - INFO - 이미지 투영 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899914/projections/projected_w.npz
+2025-03-25 10:52:18,248 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:52:18,248 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899914/factors/factors.pt
+2025-03-25 10:52:24,356 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899914/factors/factors.pt
+2025-03-25 10:52:24,356 - INFO - 스타일 요소 적용 테스트 중...
+2025-03-25 10:52:24,357 - INFO - 요소 0, 강도 5.0 적용 중...
+2025-03-25 10:52:35,875 - INFO - 요소 0, 강도 5.0 적용 완료
+2025-03-25 10:52:35,876 - INFO - 요소 0, 강도 -5.0 적용 중...
+2025-03-25 10:52:43,449 - INFO - 요소 0, 강도 -5.0 적용 완료
+2025-03-25 10:52:43,449 - INFO - 요소 1, 강도 5.0 적용 중...
+2025-03-25 10:52:55,516 - INFO - 요소 1, 강도 5.0 적용 완료
+2025-03-25 10:52:55,516 - INFO - 요소 1, 강도 -5.0 적용 중...
+2025-03-25 10:53:03,105 - INFO - 요소 1, 강도 -5.0 적용 완료
+2025-03-25 10:53:03,108 - INFO - 요소 2, 강도 5.0 적용 중...
+2025-03-25 10:53:14,346 - INFO - 요소 2, 강도 5.0 적용 완료
+2025-03-25 10:53:14,346 - INFO - 요소 2, 강도 -5.0 적용 중...
+2025-03-25 10:53:21,868 - INFO - 요소 2, 강도 -5.0 적용 완료
+2025-03-25 10:53:21,868 - INFO - 요소 3, 강도 5.0 적용 중...
+2025-03-25 10:53:33,032 - INFO - 요소 3, 강도 5.0 적용 완료
+2025-03-25 10:53:33,032 - INFO - 요소 3, 강도 -5.0 적용 중...
+2025-03-25 10:53:40,613 - INFO - 요소 3, 강도 -5.0 적용 완료
+2025-03-25 10:53:40,613 - INFO - 요소 4, 강도 5.0 적용 중...
+2025-03-25 10:53:51,803 - INFO - 요소 4, 강도 5.0 적용 완료
+2025-03-25 10:53:51,804 - INFO - 요소 4, 강도 -5.0 적용 중...
+2025-03-25 10:53:59,477 - INFO - 요소 4, 강도 -5.0 적용 완료
+2025-03-25 10:53:59,478 - INFO - 스타일 요소 적용 테스트 완료
+2025-03-25 10:53:59,478 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:53:59,478 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:54:06,392 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 10:54:07,427 - ERROR - 스타일 믹싱 실패: Usage: style_mixing.py [OPTIONS]
+Try 'style_mixing.py --help' for help.
+
+Error: Invalid value for '--styles': [-6, -6, -5]
+
+2025-03-25 10:54:07,431 - WARNING - 스타일 믹싱 테스트 실패!
+2025-03-25 10:54:07,432 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:54:07,432 - INFO - 환경 확인: 성공
+2025-03-25 10:54:07,432 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:54:07,432 - INFO - 투영 테스트: 성공
+2025-03-25 10:54:07,432 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:54:07,432 - INFO - 스타일 요소 적용 테스트: 성공
+2025-03-25 10:54:07,432 - INFO - 스타일 믹싱 테스트: 실패
+2025-03-25 10:54:07,432 - INFO - 성공률: 83.3%
+2025-03-25 10:54:07,432 - INFO - 실행 시간: 133.1초
+2025-03-25 10:54:07,432 - INFO - 전체 결과: 성공
+2025-03-25 10:54:07,432 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742899914
+2025-03-25 10:56:16,814 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742900176
+2025-03-25 10:56:16,814 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:56:16,814 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:56:16,814 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900176
+2025-03-25 10:56:16,814 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:56:16,814 - INFO - 환경 확인 중...
+2025-03-25 10:56:16,905 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:56:16,906 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:56:16,906 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:56:16,906 - INFO - 샘플 이미지 다운로드 중: https://github.com/NVlabs/stylegan2-ada-pytorch/raw/main/docs/stylegan2-ada-teaser-1024x1024.png
+2025-03-25 10:56:17,345 - ERROR - 테스트 이미지 준비 중 오류 발생: HTTP Error 404: Not Found
+2025-03-25 10:56:17,346 - ERROR - 테스트 이미지 준비 실패! 테스트를 중단합니다.
+2025-03-25 10:56:44,916 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742900204
+2025-03-25 10:56:44,916 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 10:56:44,916 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 10:56:44,916 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900204
+2025-03-25 10:56:44,916 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 10:56:44,916 - INFO - 환경 확인 중...
+2025-03-25 10:56:44,951 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 10:56:44,951 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 10:56:44,951 - INFO - 테스트 이미지 준비 중...
+2025-03-25 10:56:45,056 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900204/images/test_image.png
+2025-03-25 10:56:45,056 - INFO - 이미지 투영 테스트 중...
+2025-03-25 10:56:45,056 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900204/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900204/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 10:57:08,789 - INFO - 이미지 투영 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900204/projections/projected_w.npz
+2025-03-25 10:57:08,790 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 10:57:08,790 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900204/factors/factors.pt
+2025-03-25 10:57:15,018 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900204/factors/factors.pt
+2025-03-25 10:57:15,018 - INFO - 스타일 요소 적용 테스트 중...
+2025-03-25 10:57:15,018 - INFO - 요소 0, 강도 5.0 적용 중...
+2025-03-25 10:57:26,649 - INFO - 요소 0, 강도 5.0 적용 완료
+2025-03-25 10:57:26,650 - INFO - 요소 0, 강도 -5.0 적용 중...
+2025-03-25 10:57:34,190 - INFO - 요소 0, 강도 -5.0 적용 완료
+2025-03-25 10:57:34,191 - INFO - 요소 1, 강도 5.0 적용 중...
+2025-03-25 10:57:45,434 - INFO - 요소 1, 강도 5.0 적용 완료
+2025-03-25 10:57:45,434 - INFO - 요소 1, 강도 -5.0 적용 중...
+2025-03-25 10:57:53,009 - INFO - 요소 1, 강도 -5.0 적용 완료
+2025-03-25 10:57:53,012 - INFO - 요소 2, 강도 5.0 적용 중...
+2025-03-25 10:58:04,431 - INFO - 요소 2, 강도 5.0 적용 완료
+2025-03-25 10:58:04,431 - INFO - 요소 2, 강도 -5.0 적용 중...
+2025-03-25 10:58:11,982 - INFO - 요소 2, 강도 -5.0 적용 완료
+2025-03-25 10:58:11,982 - INFO - 요소 3, 강도 5.0 적용 중...
+2025-03-25 10:58:23,517 - INFO - 요소 3, 강도 5.0 적용 완료
+2025-03-25 10:58:23,518 - INFO - 요소 3, 강도 -5.0 적용 중...
+2025-03-25 10:58:31,066 - INFO - 요소 3, 강도 -5.0 적용 완료
+2025-03-25 10:58:31,067 - INFO - 요소 4, 강도 5.0 적용 중...
+2025-03-25 10:58:42,284 - INFO - 요소 4, 강도 5.0 적용 완료
+2025-03-25 10:58:42,285 - INFO - 요소 4, 강도 -5.0 적용 중...
+2025-03-25 10:58:49,878 - INFO - 요소 4, 강도 -5.0 적용 완료
+2025-03-25 10:58:49,878 - INFO - 스타일 요소 적용 테스트 완료
+2025-03-25 10:58:49,878 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 10:58:49,878 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 10:58:56,742 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 10:59:03,725 - INFO - 스타일 믹싱 테스트 완료
+2025-03-25 10:59:03,726 - INFO - === 테스트 결과 요약 ===
+2025-03-25 10:59:03,726 - INFO - 환경 확인: 성공
+2025-03-25 10:59:03,726 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 10:59:03,726 - INFO - 투영 테스트: 성공
+2025-03-25 10:59:03,726 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 10:59:03,726 - INFO - 스타일 요소 적용 테스트: 성공
+2025-03-25 10:59:03,726 - INFO - 스타일 믹싱 테스트: 성공
+2025-03-25 10:59:03,726 - INFO - 성공률: 100.0%
+2025-03-25 10:59:03,726 - INFO - 실행 시간: 138.8초
+2025-03-25 10:59:03,726 - INFO - 전체 결과: 성공
+2025-03-25 10:59:03,726 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900204
+2025-03-25 11:00:57,395 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742900457
+2025-03-25 11:00:57,395 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 11:00:57,395 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 11:00:57,395 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900457
+2025-03-25 11:00:57,395 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 11:00:57,395 - INFO - 환경 확인 중...
+2025-03-25 11:00:57,457 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 11:00:57,458 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 11:00:57,458 - INFO - 테스트 이미지 준비 중...
+2025-03-25 11:00:57,612 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900457/images/test_image.png
+2025-03-25 11:00:57,612 - INFO - 이미지 투영 테스트 중...
+2025-03-25 11:00:57,612 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900457/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900457/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 11:01:21,594 - INFO - 이미지 투영 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900457/projections/projected_w.npz
+2025-03-25 11:01:21,597 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 11:01:21,597 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900457/factors/factors.pt
+2025-03-25 11:01:27,722 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900457/factors/factors.pt
+2025-03-25 11:01:27,722 - INFO - 스타일 요소 적용 테스트 중...
+2025-03-25 11:01:27,723 - INFO - 요소 0, 강도 5.0 적용 중...
+2025-03-25 11:01:38,967 - INFO - 요소 0, 강도 5.0 적용 완료
+2025-03-25 11:01:38,967 - INFO - 요소 0, 강도 -5.0 적용 중...
+2025-03-25 11:01:46,462 - INFO - 요소 0, 강도 -5.0 적용 완료
+2025-03-25 11:01:46,463 - INFO - 요소 1, 강도 5.0 적용 중...
+2025-03-25 11:01:57,685 - INFO - 요소 1, 강도 5.0 적용 완료
+2025-03-25 11:01:57,685 - INFO - 요소 1, 강도 -5.0 적용 중...
+2025-03-25 11:02:05,191 - INFO - 요소 1, 강도 -5.0 적용 완료
+2025-03-25 11:02:05,191 - INFO - 요소 2, 강도 5.0 적용 중...
+2025-03-25 11:03:10,333 - INFO - 테스트 환경 초기화 완료. 테스트 ID: test_1742900590
+2025-03-25 11:03:10,333 - INFO - StyleGAN2-ADA 디렉토리: /home/elicer/stylegan2-ada-pytorch
+2025-03-25 11:03:10,333 - INFO - 모델 경로: /home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl
+2025-03-25 11:03:10,333 - INFO - 출력 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900590
+2025-03-25 11:03:10,333 - INFO - === StyleGAN2-ADA 통합 테스트 시작 ===
+2025-03-25 11:03:10,333 - INFO - 환경 확인 중...
+2025-03-25 11:03:10,418 - INFO - GPU 확인 완료: 1개 발견, 첫 번째 GPU: NVIDIA A100 80GB PCIe MIG 2g.20gb
+2025-03-25 11:03:10,418 - INFO - 환경 확인 완료: 모든 요구 사항이 충족됩니다.
+2025-03-25 11:03:10,418 - INFO - 테스트 이미지 준비 중...
+2025-03-25 11:03:10,583 - INFO - 테스트 이미지 준비 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900590/images/test_image.png
+2025-03-25 11:03:10,583 - INFO - 이미지 투영 테스트 중...
+2025-03-25 11:03:10,583 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/pbaylies_projector.py --network=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --target-image=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900590/images/test_image.png --outdir=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900590/projections --num-steps=200 --use-clip=False --use-center=False --seed=42
+2025-03-25 11:03:34,775 - INFO - 이미지 투영 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900590/projections/projected_w.npz
+2025-03-25 11:03:34,775 - INFO - 스타일 요소 추출 테스트 중...
+2025-03-25 11:03:34,775 - INFO - 실행 명령: python /home/elicer/stylegan2-ada-pytorch/closed_form_factorization.py --ckpt=/home/elicer/stylegan2-ada-pytorch/results/00000-top_cat_256-mirror-24gb-gpu-gamma50-kimg2000-bg-resumecustom/network-snapshot-002000.pkl --out=/home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900590/factors/factors.pt
+2025-03-25 11:03:40,972 - INFO - 스타일 요소 추출 테스트 완료: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900590/factors/factors.pt
+2025-03-25 11:03:40,972 - INFO - 스타일 요소 적용 테스트 중...
+2025-03-25 11:03:40,972 - INFO - 요소 0, 강도 5.0 적용 중...
+2025-03-25 11:03:52,354 - INFO - 요소 0, 강도 5.0 적용 완료
+2025-03-25 11:03:52,355 - INFO - 요소 0, 강도 10.0 적용 중...
+2025-03-25 11:04:07,578 - INFO - 요소 0, 강도 10.0 적용 완료
+2025-03-25 11:04:07,579 - INFO - 요소 1, 강도 5.0 적용 중...
+2025-03-25 11:04:19,090 - INFO - 요소 1, 강도 5.0 적용 완료
+2025-03-25 11:04:19,091 - INFO - 요소 1, 강도 10.0 적용 중...
+2025-03-25 11:04:34,169 - INFO - 요소 1, 강도 10.0 적용 완료
+2025-03-25 11:04:34,169 - INFO - 요소 2, 강도 5.0 적용 중...
+2025-03-25 11:04:44,815 - INFO - 요소 2, 강도 5.0 적용 완료
+2025-03-25 11:04:44,816 - INFO - 요소 2, 강도 10.0 적용 중...
+2025-03-25 11:04:59,552 - INFO - 요소 2, 강도 10.0 적용 완료
+2025-03-25 11:04:59,552 - INFO - 요소 3, 강도 5.0 적용 중...
+2025-03-25 11:05:11,040 - INFO - 요소 3, 강도 5.0 적용 완료
+2025-03-25 11:05:11,040 - INFO - 요소 3, 강도 10.0 적용 중...
+2025-03-25 11:05:26,251 - INFO - 요소 3, 강도 10.0 적용 완료
+2025-03-25 11:05:26,253 - INFO - 요소 4, 강도 5.0 적용 중...
+2025-03-25 11:05:38,199 - INFO - 요소 4, 강도 5.0 적용 완료
+2025-03-25 11:05:38,199 - INFO - 요소 4, 강도 10.0 적용 중...
+2025-03-25 11:05:52,590 - INFO - 요소 4, 강도 10.0 적용 완료
+2025-03-25 11:05:52,593 - INFO - 스타일 요소 적용 테스트 완료
+2025-03-25 11:05:52,593 - INFO - 스타일 믹싱 테스트 중...
+2025-03-25 11:05:52,594 - INFO - 스타일 믹싱용 이미지 생성 중...
+2025-03-25 11:05:59,476 - INFO - 스타일 믹싱 실행 중...
+2025-03-25 11:06:06,471 - INFO - 스타일 믹싱 테스트 완료
+2025-03-25 11:06:06,472 - INFO - === 테스트 결과 요약 ===
+2025-03-25 11:06:06,472 - INFO - 환경 확인: 성공
+2025-03-25 11:06:06,473 - INFO - 테스트 이미지 준비: 성공
+2025-03-25 11:06:06,473 - INFO - 투영 테스트: 성공
+2025-03-25 11:06:06,473 - INFO - 스타일 요소 추출 테스트: 성공
+2025-03-25 11:06:06,473 - INFO - 스타일 요소 적용 테스트: 성공
+2025-03-25 11:06:06,473 - INFO - 스타일 믹싱 테스트: 성공
+2025-03-25 11:06:06,473 - INFO - 성공률: 100.0%
+2025-03-25 11:06:06,474 - INFO - 실행 시간: 176.1초
+2025-03-25 11:06:06,474 - INFO - 전체 결과: 성공
+2025-03-25 11:06:06,474 - INFO - 테스트 결과 디렉토리: /home/elicer/stylegan2-ada-pytorch/test/test_results/test_1742900590
